@@ -11,11 +11,33 @@ import SwiftUI
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification), name: Notification.Name(Widget_KEY), object: nil)
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(Widget_KEY), object: nil)
+
+    }
+    
+    
+    @objc func handleNotification() {
+        
+        redLabel.textColor = .red
+
+        
+    }
+    
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         StartLiveActivities()

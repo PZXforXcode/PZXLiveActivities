@@ -44,6 +44,7 @@ struct LiveActivitiesWidgetEntryView : View {
     var body: some View {
         Text(entry.date, style: .time)
     }
+        
 }
 
 struct LiveActivitiesWidget: Widget {
@@ -52,6 +53,7 @@ struct LiveActivitiesWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             LiveActivitiesWidgetEntryView(entry: entry)
+                .widgetURL(URL(string: Widget_KEY))
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")

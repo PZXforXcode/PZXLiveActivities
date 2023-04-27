@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct LiveActivitiesWidgetBundle: WidgetBundle {
     var body: some Widget {
-//        LiveActivitiesWidget()
+        LiveActivitiesWidget()
         LiveActivitiesWidgetLiveActivity()
     }
 }

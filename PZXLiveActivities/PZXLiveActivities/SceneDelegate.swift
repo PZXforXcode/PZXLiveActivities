@@ -17,6 +17,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {  () in
+            
+            if (connectionOptions.urlContexts.first?.url.absoluteString == Widget_KEY) {
+                NotificationCenter.default.post(name: Notification.Name(Widget_KEY), object: nil)
+                
+            }
+            
+        }
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +58,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        //            print("URLContexts: \(URLContexts)")
+        
+        
+        if (URLContexts.first!.url.absoluteString == Widget_KEY) {
+            print("URL0: \(URLContexts.first!.url)")
+            NotificationCenter.default.post(name: Notification.Name(Widget_KEY), object: nil)
+        }
+        
+        
+    }
 
+    
 }
 
