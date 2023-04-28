@@ -8,13 +8,22 @@
 import UIKit
 import ActivityKit
 import SwiftUI
+import WidgetKit
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var redLabel: UILabel!
+    var num = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        ///存储数据 传给 Widget
+        let sharedDefaults = UserDefaults(suiteName: appGroupKey)
+        sharedDefaults?.set("存储文字0", forKey: dataKey)
+        sharedDefaults?.synchronize()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +39,19 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func saveTextButtonPressed(_ sender: Any) {
+        
+        ///存储数据 传给 Widget
+        num += 1
+        let String = "存储文字\(num)"
+        let sharedDefaults = UserDefaults(suiteName: appGroupKey)
+        sharedDefaults?.set(String, forKey: dataKey)
+        sharedDefaults?.synchronize()
+        WidgetCenter.shared.reloadTimelines(ofKind: "LiveActivitiesWidget")
+
+        WidgetCenter.shared.reloadAllTimelines()
+
+    }
     @objc func handleNotification() {
         
         redLabel.textColor = .red
