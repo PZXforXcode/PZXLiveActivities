@@ -47,9 +47,10 @@ class ViewController: UIViewController {
         let sharedDefaults = UserDefaults(suiteName: appGroupKey)
         sharedDefaults?.set(String, forKey: dataKey)
         sharedDefaults?.synchronize()
+        //主动刷新Widget
         WidgetCenter.shared.reloadTimelines(ofKind: "LiveActivitiesWidget")
-
-        WidgetCenter.shared.reloadAllTimelines()
+//
+//        WidgetCenter.shared.reloadAllTimelines()
 
     }
     @objc func handleNotification() {
