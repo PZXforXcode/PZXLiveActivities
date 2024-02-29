@@ -4,7 +4,44 @@
 //
 //  Created by pzx on 2023/4/19.
 //
+/**
+ 下面的命令放在命令行可以通过推送实时改变 实时活动数据
+ export TEAM_ID=KCNSS22SRZ
+ export TOKEN_KEY_FILE_NAME=AuthKey_5S685SDQG3.p8
+ export AUTH_KEY_ID=5S685SDQG3
+ export DEVICE_TOKEN=807198a534f30cf2fda2b86f048e17ddeb7b816660f878b5c9dc6b061e36122a06ef99d8043fa874a1880b24718244231b79516065c263f258ce9ce63002393f98a02315142143c02aa3e957cff2e8a4
+ export APNS_HOST_NAME=api.sandbox.push.apple.com
 
+ export JWT_ISSUE_TIME=$(date +%s)
+ export JWT_HEADER=$(printf '{ "alg": "ES256", "kid": "%s" }' "${AUTH_KEY_ID}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+ export JWT_CLAIMS=$(printf '{ "iss": "%s", "iat": %d }' "${TEAM_ID}" "${JWT_ISSUE_TIME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+ export JWT_HEADER_CLAIMS="${JWT_HEADER}.${JWT_CLAIMS}"
+ export JWT_SIGNED_HEADER_CLAIMS=$(printf "${JWT_HEADER_CLAIMS}" | openssl dgst -binary -sha256 -sign "${TOKEN_KEY_FILE_NAME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+ export AUTHENTICATION_TOKEN="${JWT_HEADER}.${JWT_CLAIMS}.${JWT_SIGNED_HEADER_CLAIMS}"
+
+ curl -v \
+ --header "apns-topic:com.pingalax.EICharge.push-type.liveactivity" \
+ --header "apns-push-type:liveactivity" \
+ --header "authorization: bearer $AUTHENTICATION_TOKEN" \
+ --data \
+ '{"Simulator Target Bundle": "com.pingalax.EICharge",
+ "aps": {
+     "timestamp":'"$JWT_ISSUE_TIME"',
+    "event": "update",
+     "sound":"default",
+          "content-state": {
+              "name": "变化000",
+              "status": 2
+          },
+ //加这个有声音
+  "alert": {
+              "title": "Delivery Update",
+              "body": "Your pizza order will arrive soon."
+          }
+ }}' \
+ --http2 \
+ https://${APNS_HOST_NAME}/3/device/$DEVICE_TOKEN
+ */
 import UIKit
 import ActivityKit
 import SwiftUI
@@ -67,11 +104,11 @@ class ViewController: UIViewController {
 
         ///延迟五秒调用
         ///看是否会主动弹出
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+5) { [self] in
-            
-
-            UpdateData()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+5) { [self] in
+//            
+//
+//            UpdateData()
+//        }
         
    
         
@@ -88,7 +125,7 @@ class ViewController: UIViewController {
         let liveActivitiesAttributes = LiveActivitiesData(numberOfPizzas: 5, totalAmount:"￥99", orderNumber: "23456")
 
         //初始化动态数据
-        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", status: 0, timer: Date()...Date().addingTimeInterval(15 * 60))
+        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", status: 1)
 
         
         
@@ -101,17 +138,29 @@ class ViewController: UIViewController {
             let deliveryActivity = try Activity<LiveActivitiesData>.request(
                 attributes: liveActivitiesAttributes,
                 contentState: initialContentState,
-                pushType: nil)
+                pushType: .token)
             //判断启动成功后，获取推送令牌 ，发送给服务器，用于远程推送Live Activities更新
             //不是每次启动都会成功，当已经存在多个Live activity时会出现启动失败的情况
             if deliveryActivity.activityState == .active{
                 _ = deliveryActivity.pushToken
                 
-                print("OKOKOKOKOK")
+                print("deliveryActivity.pushToken = \(deliveryActivity.pushToken)")
 
             }
 //            deliveryActivity.pushTokenUpdates //监听token变化
             print("Current activity id -> \(deliveryActivity.id)")
+            
+            Task {
+                          // 监听 push token 更新
+                          for await pushToken in deliveryActivity.pushTokenUpdates {
+                              let pushTokenString = pushToken.reduce("") { $0 + String(format: "%02x", $1) }
+                              print("pushTokenString = \(pushTokenString)")
+                              // 上传 push token 给服务端，用于推送更新 Live Activity
+//                              uploadTokenToService(pushTokenString)
+                          }
+            }
+            
+            
         } catch (let error) {
             print("Error info -> \(error.localizedDescription)")
         }
@@ -124,7 +173,7 @@ class ViewController: UIViewController {
         
         Task{
             
-            let data = LiveActivitiesData.LiveActivitiesStatus(name: "变化了", status: 1, timer: Date()...Date().addingTimeInterval(60 * 60))
+            let data = LiveActivitiesData.LiveActivitiesStatus(name: "变化了", status: 2)
             
             for activity in Activity<LiveActivitiesData>.activities {
                 await activity.update(using: data)

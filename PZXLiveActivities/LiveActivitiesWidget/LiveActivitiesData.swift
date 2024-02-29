@@ -16,7 +16,6 @@ public struct LiveActivitiesData: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         var name: String
         var status : Int //1待接单， 2配送中 3已完成
-        var timer: ClosedRange<Date>
     }
 
     var numberOfPizzas: Int

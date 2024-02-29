@@ -21,7 +21,7 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
             // Lock screen/banner UI goes here
             VStack {
                 
-                Text(timerInterval: context.state.timer, countsDown: true)
+                Text(timerInterval: Date()...Date().addingTimeInterval(60 * 60), countsDown: true)
                     .bold()
                     .font(.caption)
                     .foregroundColor(.white.opacity(0.8))
