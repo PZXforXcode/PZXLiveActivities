@@ -32,7 +32,7 @@ struct RightView: View {
  
     
     var body: some View {
-        let spaceHeight = 6.0
+        let spaceHeight = 8.0
         HStack {
             VStack(alignment: .leading, content: {
                 Text("状态：\(activityName)")
@@ -45,12 +45,12 @@ struct RightView: View {
             })
             Spacer()
             VStack(alignment: .trailing, content: {
-                Text("$99")
+                Text("当前费用: RM 9.9")
                     .bold()
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
                 Spacer().frame(height: spaceHeight) // 调整间距的高度
-                Text("20")
+                Text("充电时长: 20min")
                     .font(Font.system(size: 12))
                     .foregroundColor(Color.white.opacity(0.7))
             })
@@ -87,9 +87,8 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
             // Lock screen/banner UI goes here
             ActivityView(activityName: context.state.name)
                 .background(Color.blue.opacity(0.7))
-//                .activityBackgroundTint(Color.cyan)
-            //左滑按钮的颜色
-//                .activitySystemActionForegroundColor(Color.black)
+                .activityBackgroundTint(Color.white.opacity(0.1))// 背景色
+                .activitySystemActionForegroundColor(Color.black)// 系统操作的按钮字体色
                 .widgetURL(URL(string: "http://www.apple.com"))
 
 
