@@ -6,6 +6,11 @@
 //
 /**
  下面的命令放在命令行可以通过推送实时改变 实时活动数据
+ 
+ //注意事项
+ AuthKey_5S685SDQG3.p8 要在文件目录下执行
+ timestamp 时间要用当前时间 不然差的太远会导致推送收不到
+ 
  export TEAM_ID=KCNSS22SRZ
  export TOKEN_KEY_FILE_NAME=AuthKey_5S685SDQG3.p8
  export AUTH_KEY_ID=5S685SDQG3

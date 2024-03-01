@@ -9,6 +9,68 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
+struct ActivityView: View {
+    var activityName: String
+    
+    var body: some View {
+        
+        HStack {
+            leftView()
+                .padding(.leading, 20)
+                .padding(.trailing, 10)
+            RightView(activityName: activityName)
+                .padding(.trailing,30)
+        }
+        .frame(width: .infinity,alignment: .leading)
+//        .background(.cyan.opacity(0.6))
+    }
+    
+}
+
+struct RightView: View {
+    var activityName: String
+
+ 
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, content: {
+                Text("状态：\(activityName)")
+                    .font(Font.system(size: 14))
+                    .foregroundColor(Color.white)
+                Spacer().frame(height: 2) // 调整间距的高度
+                Text("2024-01-30")
+                    .font(Font.system(size: 12))
+                    .foregroundColor(Color.white.opacity(0.7))
+            })
+            Spacer()
+            VStack(alignment: .trailing, content: {
+                Text("$99")
+                    .bold()
+                    .font(Font.system(size: 14))
+                    .foregroundColor(Color.white)
+                Spacer().frame(height: 2) // 调整间距的高度
+                Text("20")
+                    .font(Font.system(size: 12))
+                    .foregroundColor(Color.white.opacity(0.7))
+            })
+            
+          
+        }
+    }
+}
+
+struct leftView: View {
+    
+    var body: some View {
+        
+        Image("无数据图")
+            .resizable()
+            .frame(width: 40,height: 40)
+        
+    }
+}
+
 
 struct LiveActivitiesWidgetLiveActivity: Widget {
     
@@ -19,18 +81,12 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
         ///通知样式
         ActivityConfiguration(for: LiveActivitiesData.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-                
-                Text(timerInterval: Date()...Date().addingTimeInterval(60 * 60), countsDown: true)
-                    .bold()
-                    .font(.caption)
-                    .foregroundColor(.white.opacity(0.8))
-                    .multilineTextAlignment(.center)
-                Text(context.state.name).foregroundColor(Color.white)
+            ActivityView(activityName: context.state.name)
+                .padding(10)
+                .background(.cyan)
+                .activityBackgroundTint(Color.cyan)
+                .activitySystemActionForegroundColor(Color.black)
 
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
 
         }
         ///灵动岛样式
@@ -61,22 +117,14 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
     }
 }
 
-//struct LiveActivitiesWidgetLiveActivity_Previews: PreviewProvider {
-//    static let attributes = LiveActivitiesWidgetAttributes(name: "Me")
-//    static let contentState = LiveActivitiesWidgetAttributes.ContentState(value: 3)
-//
-//    static var previews: some View {
-//        attributes
-//            .previewContext(contentState, viewKind: .dynamicIsland(.compact))
-//            .previewDisplayName("Island Compact")
-//        attributes
-//            .previewContext(contentState, viewKind: .dynamicIsland(.expanded))
-//            .previewDisplayName("Island Expanded")
-//        attributes
-//            .previewContext(contentState, viewKind: .dynamicIsland(.minimal))
-//            .previewDisplayName("Minimal")
-//        attributes
-//            .previewContext(contentState, viewKind: .content)
-//            .previewDisplayName("Notification")
-//    }
-//}
+struct LiveActivitiesWidgetLiveActivity_Previews: PreviewProvider {
+
+    static var previews: some View {
+        Group {
+            
+            LiveActivitiesData(numberOfPizzas: 0, totalAmount: "", orderNumber: "")
+                .previewContext(LiveActivitiesData.ContentState(name: "测试", status: 1), viewKind: .content)
+                }
+       }
+}
+
