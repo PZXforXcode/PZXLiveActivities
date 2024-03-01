@@ -21,7 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {  () in
             
+            print("URL0: \(connectionOptions.urlContexts.first?.url.absoluteString)")
+
             if (connectionOptions.urlContexts.first?.url.absoluteString == Widget_KEY) {
+//                print("URL0: \(connectionOptions.urlContexts.first?.url.absoluteString)")
+
                 NotificationCenter.default.post(name: Notification.Name(Widget_KEY), object: nil)
                 
             }
@@ -60,10 +64,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         //            print("URLContexts: \(URLContexts)")
-        
+        print("URL1: \(URLContexts.first!.url)")
+
         
         if (URLContexts.first!.url.absoluteString == Widget_KEY) {
-            print("URL0: \(URLContexts.first!.url)")
+            print("URL1: \(URLContexts.first!.url)")
             NotificationCenter.default.post(name: Notification.Name(Widget_KEY), object: nil)
         }
         

@@ -14,7 +14,7 @@ struct ActivityView: View {
     
     var body: some View {
         
-        HStack {
+        HStack(spacing:0) {
             leftView()
                 .padding(.leading, 20)
                 .padding(.trailing, 10)
@@ -22,7 +22,6 @@ struct ActivityView: View {
                 .padding(.trailing,30)
         }
         .frame(width: .infinity,alignment: .leading)
-//        .background(.cyan.opacity(0.6))
     }
     
 }
@@ -33,12 +32,13 @@ struct RightView: View {
  
     
     var body: some View {
+        let spaceHeight = 6.0
         HStack {
             VStack(alignment: .leading, content: {
                 Text("状态：\(activityName)")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
-                Spacer().frame(height: 2) // 调整间距的高度
+                Spacer().frame(height: spaceHeight) // 调整间距的高度
                 Text("2024-01-30")
                     .font(Font.system(size: 12))
                     .foregroundColor(Color.white.opacity(0.7))
@@ -49,7 +49,7 @@ struct RightView: View {
                     .bold()
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
-                Spacer().frame(height: 2) // 调整间距的高度
+                Spacer().frame(height: spaceHeight) // 调整间距的高度
                 Text("20")
                     .font(Font.system(size: 12))
                     .foregroundColor(Color.white.opacity(0.7))
@@ -64,9 +64,13 @@ struct leftView: View {
     
     var body: some View {
         
-        Image("无数据图")
-            .resizable()
+        VStack {
+            Spacer()
+            Image("无数据图")
+                .resizable()
             .frame(width: 40,height: 40)
+            Spacer()
+        }
         
     }
 }
@@ -82,13 +86,15 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
         ActivityConfiguration(for: LiveActivitiesData.self) { context in
             // Lock screen/banner UI goes here
             ActivityView(activityName: context.state.name)
-                .padding(10)
-                .background(.cyan)
-                .activityBackgroundTint(Color.cyan)
-                .activitySystemActionForegroundColor(Color.black)
+                .background(Color.blue.opacity(0.7))
+//                .activityBackgroundTint(Color.cyan)
+            //左滑按钮的颜色
+//                .activitySystemActionForegroundColor(Color.black)
+                .widgetURL(URL(string: "http://www.apple.com"))
 
 
         }
+
         ///灵动岛样式
     dynamicIsland: { context in
             DynamicIsland {
