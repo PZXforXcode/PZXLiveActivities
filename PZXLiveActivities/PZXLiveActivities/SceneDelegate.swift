@@ -64,8 +64,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         //            print("URLContexts: \(URLContexts)")
-        print("URL1: \(URLContexts.first!.url)")
-
+        if let urlString = URLContexts.first?.url.absoluteString.removingPercentEncoding {
+            print("URL1: \(urlString)")
+        } else {
+            print("Failed to decode the URL")
+        }
         
         if (URLContexts.first!.url.absoluteString == Widget_KEY) {
             print("URL1: \(URLContexts.first!.url)")

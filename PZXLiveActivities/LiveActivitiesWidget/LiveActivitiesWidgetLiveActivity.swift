@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ActivityView: View {
     var activityName: String
-//    var price: String
+    var activityPrice: String
 
     var body: some View {
         
@@ -19,8 +19,8 @@ struct ActivityView: View {
             leftView()
                 .padding(.leading, 20)
                 .padding(.trailing, 10)
-//            RightView(activityName: activityName,price: price)
-            RightView(activityName: activityName)
+            RightView(activityName: activityName,activityPrice: activityPrice)
+//            RightView(activityName: activityName)
 
                 .padding(.trailing,30)
         }
@@ -31,7 +31,7 @@ struct ActivityView: View {
 
 struct RightView: View {
     var activityName: String
-//    var price: String
+    var activityPrice: String
 
  
     
@@ -49,8 +49,8 @@ struct RightView: View {
             })
             Spacer()
             VStack(alignment: .trailing, content: {
-//                Text("当前费用: \(price)")
-                Text("当前费用: RM 9.8")
+                Text("当前费用: \(activityPrice)")
+//                Text("当前费用: RM 9.8")
                     .bold()
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
@@ -80,7 +80,7 @@ struct leftView: View {
     }
 }
 
-
+//基础类
 struct LiveActivitiesWidgetLiveActivity: Widget {
     
     
@@ -90,12 +90,12 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
         ///通知样式
         ActivityConfiguration(for: LiveActivitiesData.self) { context in
             // Lock screen/banner UI goes here
-//            ActivityView(activityName: context.state.name,price: context.state.price)
-            ActivityView(activityName: context.state.name)
+            ActivityView(activityName: context.state.name,activityPrice: context.state.price)
+//            ActivityView(activityName: context.state.name)
                 .background(Color.blue.opacity(0.7))
                 .activityBackgroundTint(Color.white.opacity(0.1))// 背景色
                 .activitySystemActionForegroundColor(Color.black)// 系统操作的按钮字体色
-                .widgetURL(URL(string: "name = \(context.state.name)"))
+                .widgetURL(URL(string: "no = \(context.state.no)"))
 
 
         }
@@ -134,8 +134,8 @@ struct LiveActivitiesWidgetLiveActivity_Previews: PreviewProvider {
         Group {
             
             LiveActivitiesData(numberOfPizzas: 0, totalAmount: "", orderNumber: "")
-                .previewContext(LiveActivitiesData.ContentState(name: "测试",status: 1), viewKind: .content)
-//                .previewContext(LiveActivitiesData.ContentState(name: "测试", price: "RM 8.8", status: 1), viewKind: .content)
+//                .previewContext(LiveActivitiesData.ContentState(name: "测试",status: 1), viewKind: .content)
+                .previewContext(LiveActivitiesData.ContentState(name: "测试", price: "RM 8.8", no: "no0", status: 1), viewKind: .content)
                 }
        }
 }
