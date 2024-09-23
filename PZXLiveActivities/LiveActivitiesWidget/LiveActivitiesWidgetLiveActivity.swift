@@ -11,14 +11,15 @@ import SwiftUI
 
 struct ActivityView: View {
     var activityName: String
-    
+    var price: String
+
     var body: some View {
         
         HStack(spacing:0) {
             leftView()
                 .padding(.leading, 20)
                 .padding(.trailing, 10)
-            RightView(activityName: activityName)
+            RightView(activityName: activityName,price: price)
                 .padding(.trailing,30)
         }
         .frame(width: .infinity,alignment: .leading)
@@ -28,6 +29,7 @@ struct ActivityView: View {
 
 struct RightView: View {
     var activityName: String
+    var price: String
 
  
     
@@ -39,13 +41,13 @@ struct RightView: View {
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
                 Spacer().frame(height: spaceHeight) // 调整间距的高度
-                Text("2024-01-30")
+                Text("2024-09-25 14:05")
                     .font(Font.system(size: 12))
                     .foregroundColor(Color.white.opacity(0.7))
             })
             Spacer()
             VStack(alignment: .trailing, content: {
-                Text("当前费用: RM 9.9")
+                Text("当前费用: \(price)")
                     .bold()
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
@@ -85,7 +87,7 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
         ///通知样式
         ActivityConfiguration(for: LiveActivitiesData.self) { context in
             // Lock screen/banner UI goes here
-            ActivityView(activityName: context.state.name)
+            ActivityView(activityName: context.state.name,price: context.state.price)
                 .background(Color.blue.opacity(0.7))
                 .activityBackgroundTint(Color.white.opacity(0.1))// 背景色
                 .activitySystemActionForegroundColor(Color.black)// 系统操作的按钮字体色
@@ -128,7 +130,7 @@ struct LiveActivitiesWidgetLiveActivity_Previews: PreviewProvider {
         Group {
             
             LiveActivitiesData(numberOfPizzas: 0, totalAmount: "", orderNumber: "")
-                .previewContext(LiveActivitiesData.ContentState(name: "测试", status: 1), viewKind: .content)
+                .previewContext(LiveActivitiesData.ContentState(name: "测试", price: "RM 8.8", status: 1), viewKind: .content)
                 }
        }
 }

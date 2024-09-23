@@ -130,7 +130,7 @@ class ViewController: UIViewController {
         let liveActivitiesAttributes = LiveActivitiesData(numberOfPizzas: 5, totalAmount:"￥99", orderNumber: "23456")
 
         //初始化动态数据
-        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", status: 1)
+        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", price: "RM 9.9", status: 1)
 
         
         
@@ -149,7 +149,7 @@ class ViewController: UIViewController {
             if deliveryActivity.activityState == .active{
                 _ = deliveryActivity.pushToken
                 
-                print("deliveryActivity.pushToken = \(deliveryActivity.pushToken)")
+                print("deliveryActivity.pushToken = \(String(describing: deliveryActivity.pushToken))")
 
             }
 //            deliveryActivity.pushTokenUpdates //监听token变化
@@ -159,6 +159,7 @@ class ViewController: UIViewController {
                           // 监听 push token 更新
                           for await pushToken in deliveryActivity.pushTokenUpdates {
                               let pushTokenString = pushToken.reduce("") { $0 + String(format: "%02x", $1) }
+                              //打印推送令牌
                               print("pushTokenString = \(pushTokenString)")
                               // 上传 push token 给服务端，用于推送更新 Live Activity
 //                              uploadTokenToService(pushTokenString)
@@ -178,7 +179,7 @@ class ViewController: UIViewController {
         
         Task{
             
-            let data = LiveActivitiesData.LiveActivitiesStatus(name: "变化了", status: 2)
+            let data = LiveActivitiesData.LiveActivitiesStatus(name: "变化了", price: "RM 11.0", status: 2)
             
             for activity in Activity<LiveActivitiesData>.activities {
                 await activity.update(using: data)
