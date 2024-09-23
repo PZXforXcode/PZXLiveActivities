@@ -130,7 +130,8 @@ class ViewController: UIViewController {
         let liveActivitiesAttributes = LiveActivitiesData(numberOfPizzas: 5, totalAmount:"￥99", orderNumber: "23456")
 
         //初始化动态数据
-        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", price: "RM 9.9", status: 1)
+//        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", price: "RM 9.9", status: 1)
+        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", status: 1)
 
         
         
@@ -179,8 +180,9 @@ class ViewController: UIViewController {
         
         Task{
             
-            let data = LiveActivitiesData.LiveActivitiesStatus(name: "充电中", price: "RM 11.0", status: 3)
-            
+//            let data = LiveActivitiesData.LiveActivitiesStatus(name: "充电中", price: "RM 11.0", status: 3)
+            let data = LiveActivitiesData.LiveActivitiesStatus(name: "充电中", status: 3)
+
             for activity in Activity<LiveActivitiesData>.activities {
                 await activity.update(using: data)
             }

@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ActivityView: View {
     var activityName: String
-    var price: String
+//    var price: String
 
     var body: some View {
         
@@ -19,7 +19,9 @@ struct ActivityView: View {
             leftView()
                 .padding(.leading, 20)
                 .padding(.trailing, 10)
-            RightView(activityName: activityName,price: price)
+//            RightView(activityName: activityName,price: price)
+            RightView(activityName: activityName)
+
                 .padding(.trailing,30)
         }
         .frame(width: .infinity,alignment: .leading)
@@ -29,7 +31,7 @@ struct ActivityView: View {
 
 struct RightView: View {
     var activityName: String
-    var price: String
+//    var price: String
 
  
     
@@ -47,7 +49,8 @@ struct RightView: View {
             })
             Spacer()
             VStack(alignment: .trailing, content: {
-                Text("当前费用: \(price)")
+//                Text("当前费用: \(price)")
+                Text("当前费用: RM 9.8")
                     .bold()
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
@@ -87,11 +90,12 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
         ///通知样式
         ActivityConfiguration(for: LiveActivitiesData.self) { context in
             // Lock screen/banner UI goes here
-            ActivityView(activityName: context.state.name,price: context.state.price)
+//            ActivityView(activityName: context.state.name,price: context.state.price)
+            ActivityView(activityName: context.state.name)
                 .background(Color.blue.opacity(0.7))
                 .activityBackgroundTint(Color.white.opacity(0.1))// 背景色
                 .activitySystemActionForegroundColor(Color.black)// 系统操作的按钮字体色
-                .widgetURL(URL(string: "http://www.apple.com"))
+                .widgetURL(URL(string: "name = \(context.state.name)"))
 
 
         }
@@ -102,21 +106,21 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("朱宇航心率88💓")
+//                    Text("朱宇航心率88💓")
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("杨芮淇心率:87💓")
+//                    Text("杨芮淇心率:87💓")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("葛飞👦🏻")
+//                    Text("葛飞👦🏻")
                     // more content
                 }
             } compactLeading: {
-                Text("朱宇航心率")
+//                Text("朱宇航心率")
             } compactTrailing: {
-                Text("杨芮淇心率")
+//                Text("杨芮淇心率")
             } minimal: {
-                Text("迷你")
+//                Text("迷你")
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -130,7 +134,8 @@ struct LiveActivitiesWidgetLiveActivity_Previews: PreviewProvider {
         Group {
             
             LiveActivitiesData(numberOfPizzas: 0, totalAmount: "", orderNumber: "")
-                .previewContext(LiveActivitiesData.ContentState(name: "测试", price: "RM 8.8", status: 1), viewKind: .content)
+                .previewContext(LiveActivitiesData.ContentState(name: "测试",status: 1), viewKind: .content)
+//                .previewContext(LiveActivitiesData.ContentState(name: "测试", price: "RM 8.8", status: 1), viewKind: .content)
                 }
        }
 }
