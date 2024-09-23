@@ -179,7 +179,7 @@ class ViewController: UIViewController {
         
         Task{
             
-            let data = LiveActivitiesData.LiveActivitiesStatus(name: "变化了", price: "RM 11.0", status: 2)
+            let data = LiveActivitiesData.LiveActivitiesStatus(name: "充电中", price: "RM 11.0", status: 3)
             
             for activity in Activity<LiveActivitiesData>.activities {
                 await activity.update(using: data)
