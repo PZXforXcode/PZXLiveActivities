@@ -9,20 +9,51 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
+struct PZXProgressBar: View {
+    var foregroundColor: Color
+    var backgroundColor: Color
+    var process: CGFloat  // 进度值，范围 0.0 - 1.0
+
+    var body: some View {
+        let height: CGFloat = 5.0
+
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                // 背景条
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(backgroundColor)
+                    .frame(height: height)
+
+                // 前景条，表示进度
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(foregroundColor)
+                    .frame(width: geometry.size.width * min(max(process, 0), 1), height: height) // 动态计算宽度
+                    .animation(.linear, value: process)  // 添加动画
+            }
+        }
+        .frame(height: height) // 限制进度条高度
+    }
+}
 struct ActivityView: View {
     var activityName: String
     var activityPrice: String
+    @State var activityProgress: CGFloat = 0.0  // 进度值
 
+    
     var body: some View {
-        
-        HStack(spacing:0) {
-            leftView()
-                .padding(.leading, 20)
-                .padding(.trailing, 10)
-            RightView(activityName: activityName,activityPrice: activityPrice)
-//            RightView(activityName: activityName)
+        VStack {
+            HStack(spacing:0) {
+                leftView()//图片
+                    .padding(.leading, 20)
+                    .padding(.trailing, 10)
+                RightView(activityName: activityName,activityPrice: activityPrice)//右边的数据
+    //            RightView(activityName: activityName)
+                    .padding(.trailing,30)
+            }
+            PZXProgressBar(foregroundColor: .orange, backgroundColor: .white, process: activityProgress)
+                .padding(.horizontal,20)
+                .padding(.bottom,20)
 
-                .padding(.trailing,30)
         }
         .frame(width: .infinity,alignment: .leading)
     }
@@ -36,8 +67,9 @@ struct RightView: View {
  
     
     var body: some View {
-        let spaceHeight = 8.0
+        let spaceHeight = 18.0
         HStack {
+            
             VStack(alignment: .leading, content: {
                 Text("状态：\(activityName)")
                     .font(Font.system(size: 14))
@@ -47,6 +79,7 @@ struct RightView: View {
                     .font(Font.system(size: 12))
                     .foregroundColor(Color.white.opacity(0.7))
             })
+            .padding(.vertical,16)
             Spacer()
             VStack(alignment: .trailing, content: {
                 Text("当前费用: \(activityPrice)")
@@ -83,14 +116,29 @@ struct leftView: View {
 //基础类
 struct LiveActivitiesWidgetLiveActivity: Widget {
     
+    func setProgress(status:Int) -> CGFloat{
+        
+        switch status {
+        case 1:
+            return 0.25
+        case 2:
+            return 0.5
+        case 3:
+            return 0.75
+        case 4:
+            return 1.0
+        default:
+            return 0.0
+        }
+    }
     
     var body: some WidgetConfiguration {
         
-        
         ///通知样式
         ActivityConfiguration(for: LiveActivitiesData.self) { context in
+    
             // Lock screen/banner UI goes here
-            ActivityView(activityName: context.state.name,activityPrice: context.state.price)
+            ActivityView(activityName: context.state.name,activityPrice: context.state.price,activityProgress: setProgress(status: context.state.status))
 //            ActivityView(activityName: context.state.name)
                 .background(Color.blue.opacity(0.7))
                 .activityBackgroundTint(Color.white.opacity(0.1))// 背景色
@@ -107,6 +155,8 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
 //                    Text("朱宇航心率88💓")
+                    Text("状态: \(context.state.name)")
+
                 }
                 DynamicIslandExpandedRegion(.trailing) {
 //                    Text("杨芮淇心率:87💓")
