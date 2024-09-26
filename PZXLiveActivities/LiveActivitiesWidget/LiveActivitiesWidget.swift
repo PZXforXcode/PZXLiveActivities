@@ -47,8 +47,23 @@ struct LiveActivitiesWidgetEntryView : View {
 
 
     var body: some View {
-        Text(entry.date, style: .time)
-        Text(entry.sharedData)
+        if #available(iOSApplicationExtension 17.0, *) {
+            VStack { // 用 VStack 包裹视图
+                Text(entry.date, style: .time)
+                Text(entry.sharedData)
+
+            }
+            .padding() // 添加 padding 增加布局空间
+            .containerBackground(Color.white, for: .widget)
+        } else {
+            // Fallback on earlier versions
+            VStack { // 用 VStack 包裹视图
+                Text(entry.date, style: .time)
+                Text(entry.sharedData)
+            }
+            .padding() // 添加 padding 增加布局空间
+        } // 使用 Color 作为背景样式，适配系统动态背景
+        // 应用容器背景，使背景适配系统动态背景
     }
         
 }

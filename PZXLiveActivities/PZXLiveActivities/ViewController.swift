@@ -121,6 +121,13 @@ class ViewController: UIViewController {
     
     func StartLiveActivities() {
         
+        // 关闭所有当前的活动，确保只有一个活动在运行
+        for activity in Activity<LiveActivitiesData>.activities {
+            Task {
+                await activity.end(dismissalPolicy: .immediate) // 结束当前活动
+            }
+        }
+
         
         if ActivityAuthorizationInfo().areActivitiesEnabled == true {
             
