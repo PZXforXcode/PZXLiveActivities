@@ -55,6 +55,7 @@ struct ActivityView: View {
                 .padding(.bottom,20)
 
         }
+//        .background(Color.yellow.opacity(0.7))
         .frame(width: .infinity,alignment: .leading)
     }
     
@@ -139,10 +140,13 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
     
             // Lock screen/banner UI goes here
             ActivityView(activityName: context.state.name,activityPrice: context.state.price,activityProgress: setProgress(status: context.state.status))
+                .activitySystemActionForegroundColor(Color.blue.opacity(0.9))
 //            ActivityView(activityName: context.state.name)
                 .background(Color.blue.opacity(0.7))
-                .activityBackgroundTint(Color.white.opacity(0.1))// 背景色
-                .activitySystemActionForegroundColor(Color.black)// 系统操作的按钮字体色
+//                .activityBackgroundTint(Color.white.opacity(0.8))// 背景色
+//                .activityBackgroundTint(Color.blue.opacity(0.7))// 背景色
+//                .activitySystemActionForegroundColor(Color.blue.opacity(0.9))
+            // 系统操作的按钮字体色 //无效？
                 .widgetURL(URL(string: "no = \(context.state.no)"))
 
 
@@ -155,25 +159,40 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
 //                    Text("朱宇航心率88💓")
-                    Text("状态: \(context.state.name)")
+//                    Text("状态: \(context.state.name)")
+//                        .font(Font.system(size: 14))
+//                        .padding()
 
                 }
                 DynamicIslandExpandedRegion(.trailing) {
 //                    Text("杨芮淇心率:87💓")
+//                    Text("SOC: 45%")
+//                        .font(Font.system(size: 14))
+//                        .padding()
+
                 }
                 DynamicIslandExpandedRegion(.bottom) {
 //                    Text("葛飞👦🏻")
+//                    PZXProgressBar(foregroundColor: .orange, backgroundColor: .white, process: 0.4)
+//                        .padding()
                     // more content
                 }
             } compactLeading: {
 //                Text("朱宇航心率")
+//                Text("状态: \(context.state.name)")
+//                    .font(Font.system(size: 12))
+
             } compactTrailing: {
-//                Text("杨芮淇心率")
+//                Text("SOC: 45%")
+//                    .font(Font.system(size: 12))
+
             } minimal: {
 //                Text("迷你")
+//                Text("SOC: 45%")
+//                    .font(Font.system(size: 12))
             }
             .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
+//            .keylineTint(Color.red)
         }
     }
 }
