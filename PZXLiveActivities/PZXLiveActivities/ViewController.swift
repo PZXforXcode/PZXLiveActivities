@@ -57,6 +57,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var redLabel: UILabel!
     var num = 0;
     
+    @IBOutlet weak var localizableLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -65,6 +66,9 @@ class ViewController: UIViewController {
         let sharedDefaults = UserDefaults(suiteName: appGroupKey)
         sharedDefaults?.set("存储文字0", forKey: dataKey)
         sharedDefaults?.synchronize()
+        
+        localizableLabel.hc_Text = "Scan.scan"
+
         
     }
 
@@ -103,6 +107,18 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func SwitchLanguageButtonPressed(_ sender: Any) {
+        
+        let bundle = HCLocalizableManager.share.currentBundleName
+        
+        print("bundle = \(HCLocalizableManager.share.currentBundleName)")
+        if (bundle == "en") {
+            HCLocalizableManager.share.updateLanguage("zh-Hans")
+        } else {
+            //如果是中文以外的 用英文
+            HCLocalizableManager.share.updateLanguage("en")
+        }
+    }
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         StartLiveActivities()
@@ -122,11 +138,11 @@ class ViewController: UIViewController {
     func StartLiveActivities() {
         
         // 关闭所有当前的活动，确保只有一个活动在运行
-        for activity in Activity<LiveActivitiesData>.activities {
-            Task {
-                await activity.end(dismissalPolicy: .immediate) // 结束当前活动
-            }
-        }
+//        for activity in Activity<LiveActivitiesData>.activities {
+//            Task {
+//                await activity.end(dismissalPolicy: .immediate) // 结束当前活动
+//            }
+//        }
 
         
         if ActivityAuthorizationInfo().areActivitiesEnabled == true {
@@ -134,8 +150,10 @@ class ViewController: UIViewController {
         }
         
         //初始化静态数据
-        let liveActivitiesAttributes = LiveActivitiesData(numberOfPizzas: 5, totalAmount:"￥99", orderNumber: "23456")
-
+        let bundle = HCLocalizableManager.share.currentBundleName
+        print("bundle00 = \(HCLocalizableManager.share.currentBundleName)")
+        //初始化静态数据
+        let liveActivitiesAttributes = LiveActivitiesData(numberOfPizzas: 5, statusString:DEF_LOCALIZED_STRING(key: "EICharge.status"), orderNumber: "23456", bundle: bundle)
         //初始化动态数据
         let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", price: "RM 8.8", no: "no000", status: 1)
 //        let initialContentState = LiveActivitiesData.LiveActivitiesStatus(name: "初始", status: 1)

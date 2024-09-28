@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  ios-eynamics-app
+
+  Created by 彭祖鑫 on 2023/9/20.
+  Copyright © 2023 PC. All rights reserved.
+*/
+//"CFBundleDisplayName" = "平创数能";
+"NSBluetoothAlwaysUsageDescription" = "平创数能需要获取蓝牙扫描和连接权限，用于扫描和连接附近设备等功能。";
+
+

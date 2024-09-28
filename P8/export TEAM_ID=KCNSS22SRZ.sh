@@ -1,7 +1,7 @@
 export TEAM_ID=KCNSS22SRZ
 export TOKEN_KEY_FILE_NAME=AuthKey_5S685SDQG3.p8
 export AUTH_KEY_ID=5S685SDQG3
-export DEVICE_TOKEN=80936829badcbcdc88172c9f5a3d8d9c78d9d8dd3d21cc81919bda3bdc3fee3e3b6d397b59babb52e10a23ff0203fa441f278fe7120b2645320cb1e2f8bf49fa41b0963018ee306e5369a5c7fd2c9d2a
+export DEVICE_TOKEN=80859e1a48083a83db6fc4e381aec0efbeeec0025823518d380a66497189196475f1a2fce6834db57e40bfa45309bb3104f1622e1091e6ec728e034a5ee7507f63a177e1787dfe4a4c47707795d4991c
 export APNS_HOST_NAME=api.sandbox.push.apple.com
 
 export JWT_ISSUE_TIME=$(date +%s)
@@ -36,7 +36,7 @@ https://${APNS_HOST_NAME}/3/device/$DEVICE_TOKEN
  export TEAM_ID=KCNSS22SRZ
  export TOKEN_KEY_FILE_NAME=AuthKey_5S685SDQG3.p8
  export AUTH_KEY_ID=5S685SDQG3
- export DEVICE_TOKEN=806e1488e10e3c1a2add64d57ef6d8844f55bbcb748256b34bc233771e87c8fc5e4722f716d60005f96322d59dfe96781516cbbb9889021af35d4e3432d6141d708aa445f8f102f664f70cd21026ec21
+ export DEVICE_TOKEN=801e5d076bd6f75b1694e6d91108670d405bd84539333b4d048a152b2796d7f959948ce0c23f0a2933f87259b9e3e54bea2b2eb2ca1986ef5b8f2e568cbe10dbd4badd78f3062565ec74f6f6ccd0f596
  export APNS_HOST_NAME=api.sandbox.push.apple.com
 
  export JWT_ISSUE_TIME=$(date +%s)
@@ -49,6 +49,7 @@ https://${APNS_HOST_NAME}/3/device/$DEVICE_TOKEN
  curl -v \
  --header "apns-topic:com.pingalax.EICharge.push-type.liveactivity" \
  --header "apns-push-type:liveactivity" \
+ --header "apns-priority: 10" \
  --header "authorization: bearer $AUTHENTICATION_TOKEN" \
  --data \
  '{"Simulator Target Bundle": "com.pingalax.EICharge",
@@ -60,7 +61,7 @@ https://${APNS_HOST_NAME}/3/device/$DEVICE_TOKEN
        "name": "充电完成",
        "price":"RM 12.10",
        "no":"NO7768897654681HGD",
-       "status": 4
+       "status": 1
     },
  }}' \
  --http2 \

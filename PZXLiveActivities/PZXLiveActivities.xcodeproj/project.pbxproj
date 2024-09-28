@@ -24,6 +24,50 @@
 		707A564329EFF469001EEDF6 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A564229EFF469001EEDF6 /* TestData.swift */; };
 		707A564429EFF66E001EEDF6 /* LiveActivitiesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A563E29EFEFB0001EEDF6 /* LiveActivitiesData.swift */; };
 		70EE9EC829FA6AFC00F64E99 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A564229EFF469001EEDF6 /* TestData.swift */; };
+		8907BBA02CA7B22A00963C73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB992CA7B22A00963C73 /* InfoPlist.strings */; };
+		8907BBA12CA7B22A00963C73 /* LanguageTypeAndBundle.json in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB9A2CA7B22A00963C73 /* LanguageTypeAndBundle.json */; };
+		8907BBA22CA7B22A00963C73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB9E2CA7B22A00963C73 /* Localizable.strings */; };
+		8907BBA32CA7B22A00963C73 /* Localizable.py in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB9B2CA7B22A00963C73 /* Localizable.py */; };
+		8907BBA42CA7B22A00963C73 /* HCLocalizableManager-OC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB852CA7B22A00963C73 /* HCLocalizableManager-OC.m */; };
+		8907BBA52CA7B22A00963C73 /* UITabBarItem+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB902CA7B22A00963C73 /* UITabBarItem+Localizable.swift */; };
+		8907BBA62CA7B22A00963C73 /* UISearchBar+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8F2CA7B22A00963C73 /* UISearchBar+Localizable.swift */; };
+		8907BBA72CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB822CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift */; };
+		8907BBA82CA7B22A00963C73 /* UILabel+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8D2CA7B22A00963C73 /* UILabel+Localizable.swift */; };
+		8907BBA92CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB872CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift */; };
+		8907BBAA2CA7B22A00963C73 /* UIButton+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8A2CA7B22A00963C73 /* UIButton+Localizable.swift */; };
+		8907BBAB2CA7B22A00963C73 /* UINavigationItem+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8E2CA7B22A00963C73 /* UINavigationItem+Localizable.swift */; };
+		8907BBAC2CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB892CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift */; };
+		8907BBAD2CA7B22A00963C73 /* UITextField+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB912CA7B22A00963C73 /* UITextField+Localizable.swift */; };
+		8907BBAE2CA7B22A00963C73 /* UIImage+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8B2CA7B22A00963C73 /* UIImage+Localizable.swift */; };
+		8907BBAF2CA7B22A00963C73 /* HCLocalizableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB832CA7B22A00963C73 /* HCLocalizableManager.swift */; };
+		8907BBB02CA7B22A00963C73 /* HCLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB952CA7B22A00963C73 /* HCLanguageModel.swift */; };
+		8907BBB12CA7B22A00963C73 /* UIViewController+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB932CA7B22A00963C73 /* UIViewController+Localizable.swift */; };
+		8907BBB22CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB962CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift */; };
+		8907BBB32CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8C2CA7B22A00963C73 /* UIImageView+Localizable.swift */; };
+		8907BBB42CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB922CA7B22A00963C73 /* UITextView+Localizable.swift */; };
+		8907BBB52CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB862CA7B22A00963C73 /* NSObject+Localizable.swift */; };
+		8907BBB62CA7B22A00963C73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB992CA7B22A00963C73 /* InfoPlist.strings */; };
+		8907BBB72CA7B22A00963C73 /* LanguageTypeAndBundle.json in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB9A2CA7B22A00963C73 /* LanguageTypeAndBundle.json */; };
+		8907BBB82CA7B22A00963C73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB9E2CA7B22A00963C73 /* Localizable.strings */; };
+		8907BBB92CA7B22A00963C73 /* Localizable.py in Resources */ = {isa = PBXBuildFile; fileRef = 8907BB9B2CA7B22A00963C73 /* Localizable.py */; };
+		8907BBBA2CA7B22A00963C73 /* HCLocalizableManager-OC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB852CA7B22A00963C73 /* HCLocalizableManager-OC.m */; };
+		8907BBBB2CA7B22A00963C73 /* UITabBarItem+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB902CA7B22A00963C73 /* UITabBarItem+Localizable.swift */; };
+		8907BBBC2CA7B22A00963C73 /* UISearchBar+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8F2CA7B22A00963C73 /* UISearchBar+Localizable.swift */; };
+		8907BBBD2CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB822CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift */; };
+		8907BBBE2CA7B22A00963C73 /* UILabel+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8D2CA7B22A00963C73 /* UILabel+Localizable.swift */; };
+		8907BBBF2CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB872CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift */; };
+		8907BBC02CA7B22A00963C73 /* UIButton+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8A2CA7B22A00963C73 /* UIButton+Localizable.swift */; };
+		8907BBC12CA7B22A00963C73 /* UINavigationItem+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8E2CA7B22A00963C73 /* UINavigationItem+Localizable.swift */; };
+		8907BBC22CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB892CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift */; };
+		8907BBC32CA7B22A00963C73 /* UITextField+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB912CA7B22A00963C73 /* UITextField+Localizable.swift */; };
+		8907BBC42CA7B22A00963C73 /* UIImage+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8B2CA7B22A00963C73 /* UIImage+Localizable.swift */; };
+		8907BBC52CA7B22A00963C73 /* HCLocalizableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB832CA7B22A00963C73 /* HCLocalizableManager.swift */; };
+		8907BBC62CA7B22A00963C73 /* HCLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB952CA7B22A00963C73 /* HCLanguageModel.swift */; };
+		8907BBC72CA7B22A00963C73 /* UIViewController+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB932CA7B22A00963C73 /* UIViewController+Localizable.swift */; };
+		8907BBC82CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB962CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift */; };
+		8907BBC92CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8C2CA7B22A00963C73 /* UIImageView+Localizable.swift */; };
+		8907BBCA2CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB922CA7B22A00963C73 /* UITextView+Localizable.swift */; };
+		8907BBCB2CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB862CA7B22A00963C73 /* NSObject+Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +115,31 @@
 		707A564229EFF469001EEDF6 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		70AC216429FB6D9100FCA5C7 /* LiveActivitiesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveActivitiesWidgetExtension.entitlements; sourceTree = "<group>"; };
 		70AC216529FB6DBC00FCA5C7 /* PZXLiveActivities.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PZXLiveActivities.entitlements; sourceTree = "<group>"; };
+		8907BB822CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCLocalizableDeinitBlockExecutor.swift; sourceTree = "<group>"; };
+		8907BB832CA7B22A00963C73 /* HCLocalizableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCLocalizableManager.swift; sourceTree = "<group>"; };
+		8907BB842CA7B22A00963C73 /* HCLocalizableManager-OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HCLocalizableManager-OC.h"; sourceTree = "<group>"; };
+		8907BB852CA7B22A00963C73 /* HCLocalizableManager-OC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HCLocalizableManager-OC.m"; sourceTree = "<group>"; };
+		8907BB862CA7B22A00963C73 /* NSObject+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB872CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LocalizableDeinit.swift"; sourceTree = "<group>"; };
+		8907BB892CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB8A2CA7B22A00963C73 /* UIButton+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB8B2CA7B22A00963C73 /* UIImage+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB8C2CA7B22A00963C73 /* UIImageView+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB8D2CA7B22A00963C73 /* UILabel+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB8E2CA7B22A00963C73 /* UINavigationItem+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB8F2CA7B22A00963C73 /* UISearchBar+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB902CA7B22A00963C73 /* UITabBarItem+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB912CA7B22A00963C73 /* UITextField+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB922CA7B22A00963C73 /* UITextView+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB932CA7B22A00963C73 /* UIViewController+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Localizable.swift"; sourceTree = "<group>"; };
+		8907BB952CA7B22A00963C73 /* HCLanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCLanguageModel.swift; sourceTree = "<group>"; };
+		8907BB962CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCLocalizableResourcesFilter.swift; sourceTree = "<group>"; };
+		8907BB972CA7B22A00963C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8907BB982CA7B22A00963C73 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8907BB9A2CA7B22A00963C73 /* LanguageTypeAndBundle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LanguageTypeAndBundle.json; sourceTree = "<group>"; };
+		8907BB9B2CA7B22A00963C73 /* Localizable.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = Localizable.py; sourceTree = "<group>"; };
+		8907BB9C2CA7B22A00963C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8907BB9D2CA7B22A00963C73 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +185,7 @@
 		707A560B29EFCCAB001EEDF6 /* PZXLiveActivities */ = {
 			isa = PBXGroup;
 			children = (
+				8907BB9F2CA7B22A00963C73 /* LanguageSwitch */,
 				70AC216529FB6DBC00FCA5C7 /* PZXLiveActivities.entitlements */,
 				707A560C29EFCCAB001EEDF6 /* AppDelegate.swift */,
 				707A560E29EFCCAB001EEDF6 /* SceneDelegate.swift */,
@@ -149,6 +219,52 @@
 				707A563329EFCCD7001EEDF6 /* Info.plist */,
 			);
 			path = LiveActivitiesWidget;
+			sourceTree = "<group>";
+		};
+		8907BB882CA7B22A00963C73 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8907BB822CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift */,
+				8907BB832CA7B22A00963C73 /* HCLocalizableManager.swift */,
+				8907BB842CA7B22A00963C73 /* HCLocalizableManager-OC.h */,
+				8907BB852CA7B22A00963C73 /* HCLocalizableManager-OC.m */,
+				8907BB862CA7B22A00963C73 /* NSObject+Localizable.swift */,
+				8907BB872CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8907BB942CA7B22A00963C73 /* UIKit+Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				8907BB892CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift */,
+				8907BB8A2CA7B22A00963C73 /* UIButton+Localizable.swift */,
+				8907BB8B2CA7B22A00963C73 /* UIImage+Localizable.swift */,
+				8907BB8C2CA7B22A00963C73 /* UIImageView+Localizable.swift */,
+				8907BB8D2CA7B22A00963C73 /* UILabel+Localizable.swift */,
+				8907BB8E2CA7B22A00963C73 /* UINavigationItem+Localizable.swift */,
+				8907BB8F2CA7B22A00963C73 /* UISearchBar+Localizable.swift */,
+				8907BB902CA7B22A00963C73 /* UITabBarItem+Localizable.swift */,
+				8907BB912CA7B22A00963C73 /* UITextField+Localizable.swift */,
+				8907BB922CA7B22A00963C73 /* UITextView+Localizable.swift */,
+				8907BB932CA7B22A00963C73 /* UIViewController+Localizable.swift */,
+			);
+			path = "UIKit+Localizable";
+			sourceTree = "<group>";
+		};
+		8907BB9F2CA7B22A00963C73 /* LanguageSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				8907BB882CA7B22A00963C73 /* Core */,
+				8907BB942CA7B22A00963C73 /* UIKit+Localizable */,
+				8907BB952CA7B22A00963C73 /* HCLanguageModel.swift */,
+				8907BB962CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift */,
+				8907BB992CA7B22A00963C73 /* InfoPlist.strings */,
+				8907BB9A2CA7B22A00963C73 /* LanguageTypeAndBundle.json */,
+				8907BB9B2CA7B22A00963C73 /* Localizable.py */,
+				8907BB9E2CA7B22A00963C73 /* Localizable.strings */,
+			);
+			path = LanguageSwitch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +331,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 707A560029EFCCAB001EEDF6;
 			productRefGroup = 707A560A29EFCCAB001EEDF6 /* Products */;
@@ -234,6 +351,10 @@
 			files = (
 				707A561929EFCCAD001EEDF6 /* LaunchScreen.storyboard in Resources */,
 				707A561629EFCCAD001EEDF6 /* Assets.xcassets in Resources */,
+				8907BBA02CA7B22A00963C73 /* InfoPlist.strings in Resources */,
+				8907BBA12CA7B22A00963C73 /* LanguageTypeAndBundle.json in Resources */,
+				8907BBA22CA7B22A00963C73 /* Localizable.strings in Resources */,
+				8907BBA32CA7B22A00963C73 /* Localizable.py in Resources */,
 				707A561429EFCCAB001EEDF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +363,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8907BBB62CA7B22A00963C73 /* InfoPlist.strings in Resources */,
+				8907BBB72CA7B22A00963C73 /* LanguageTypeAndBundle.json in Resources */,
+				8907BBB82CA7B22A00963C73 /* Localizable.strings in Resources */,
+				8907BBB92CA7B22A00963C73 /* Localizable.py in Resources */,
 				707A563229EFCCD7001EEDF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +378,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8907BBA42CA7B22A00963C73 /* HCLocalizableManager-OC.m in Sources */,
+				8907BBA52CA7B22A00963C73 /* UITabBarItem+Localizable.swift in Sources */,
+				8907BBA62CA7B22A00963C73 /* UISearchBar+Localizable.swift in Sources */,
+				8907BBA72CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift in Sources */,
+				8907BBA82CA7B22A00963C73 /* UILabel+Localizable.swift in Sources */,
+				8907BBA92CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift in Sources */,
+				8907BBAA2CA7B22A00963C73 /* UIButton+Localizable.swift in Sources */,
+				8907BBAB2CA7B22A00963C73 /* UINavigationItem+Localizable.swift in Sources */,
+				8907BBAC2CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift in Sources */,
+				8907BBAD2CA7B22A00963C73 /* UITextField+Localizable.swift in Sources */,
+				8907BBAE2CA7B22A00963C73 /* UIImage+Localizable.swift in Sources */,
+				8907BBAF2CA7B22A00963C73 /* HCLocalizableManager.swift in Sources */,
+				8907BBB02CA7B22A00963C73 /* HCLanguageModel.swift in Sources */,
+				8907BBB12CA7B22A00963C73 /* UIViewController+Localizable.swift in Sources */,
+				8907BBB22CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift in Sources */,
+				8907BBB32CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */,
+				8907BBB42CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */,
+				8907BBB52CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */,
 				707A561129EFCCAB001EEDF6 /* ViewController.swift in Sources */,
 				707A560D29EFCCAB001EEDF6 /* AppDelegate.swift in Sources */,
 				707A563F29EFEFB0001EEDF6 /* LiveActivitiesData.swift in Sources */,
@@ -265,6 +408,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8907BBBA2CA7B22A00963C73 /* HCLocalizableManager-OC.m in Sources */,
+				8907BBBB2CA7B22A00963C73 /* UITabBarItem+Localizable.swift in Sources */,
+				8907BBBC2CA7B22A00963C73 /* UISearchBar+Localizable.swift in Sources */,
+				8907BBBD2CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift in Sources */,
+				8907BBBE2CA7B22A00963C73 /* UILabel+Localizable.swift in Sources */,
+				8907BBBF2CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift in Sources */,
+				8907BBC02CA7B22A00963C73 /* UIButton+Localizable.swift in Sources */,
+				8907BBC12CA7B22A00963C73 /* UINavigationItem+Localizable.swift in Sources */,
+				8907BBC22CA7B22A00963C73 /* UIBarButtonItem+Localizable.swift in Sources */,
+				8907BBC32CA7B22A00963C73 /* UITextField+Localizable.swift in Sources */,
+				8907BBC42CA7B22A00963C73 /* UIImage+Localizable.swift in Sources */,
+				8907BBC52CA7B22A00963C73 /* HCLocalizableManager.swift in Sources */,
+				8907BBC62CA7B22A00963C73 /* HCLanguageModel.swift in Sources */,
+				8907BBC72CA7B22A00963C73 /* UIViewController+Localizable.swift in Sources */,
+				8907BBC82CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift in Sources */,
+				8907BBC92CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */,
+				8907BBCA2CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */,
+				8907BBCB2CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */,
 				70EE9EC829FA6AFC00F64E99 /* TestData.swift in Sources */,
 				707A564429EFF66E001EEDF6 /* LiveActivitiesData.swift in Sources */,
 				707A562C29EFCCD6001EEDF6 /* LiveActivitiesWidgetBundle.swift in Sources */,
@@ -298,6 +459,24 @@
 				707A561829EFCCAD001EEDF6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8907BB992CA7B22A00963C73 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8907BB972CA7B22A00963C73 /* en */,
+				8907BB982CA7B22A00963C73 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8907BB9E2CA7B22A00963C73 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8907BB9C2CA7B22A00963C73 /* en */,
+				8907BB9D2CA7B22A00963C73 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -430,6 +609,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PZXLiveActivities/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -465,6 +645,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PZXLiveActivities/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

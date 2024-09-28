@@ -21,7 +21,8 @@ public struct LiveActivitiesData: ActivityAttributes {
     }
 
     var numberOfPizzas: Int
-    var totalAmount: String
+    var statusString: String
     var orderNumber: String
+    var bundle: String
 
 }

@@ -38,6 +38,7 @@ struct ActivityView: View {
     var activityName: String
     var activityPrice: String
     @State var activityProgress: CGFloat = 0.0  // 进度值
+    var liveActivitiesData: LiveActivitiesData
 
     
     var body: some View {
@@ -46,7 +47,7 @@ struct ActivityView: View {
                 leftView()//图片
                     .padding(.leading, 20)
                     .padding(.trailing, 10)
-                RightView(activityName: activityName,activityPrice: activityPrice)//右边的数据
+                RightView(activityName: activityName,activityPrice: activityPrice,liveActivitiesData: liveActivitiesData)
     //            RightView(activityName: activityName)
                     .padding(.trailing,30)
             }
@@ -64,6 +65,7 @@ struct ActivityView: View {
 struct RightView: View {
     var activityName: String
     var activityPrice: String
+    var liveActivitiesData: LiveActivitiesData
 
  
     
@@ -72,7 +74,7 @@ struct RightView: View {
         HStack {
             
             VStack(alignment: .leading, content: {
-                Text("状态：\(activityName)")
+                Text("\(liveActivitiesData.statusString)\(activityName)")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.white)
                 Spacer().frame(height: spaceHeight) // 调整间距的高度
@@ -139,7 +141,7 @@ struct LiveActivitiesWidgetLiveActivity: Widget {
         ActivityConfiguration(for: LiveActivitiesData.self) { context in
     
             // Lock screen/banner UI goes here
-            ActivityView(activityName: context.state.name,activityPrice: context.state.price,activityProgress: setProgress(status: context.state.status))
+            ActivityView(activityName: context.state.name,activityPrice: context.state.price,activityProgress: setProgress(status: context.state.status), liveActivitiesData: context.attributes)
                 .activitySystemActionForegroundColor(Color.blue.opacity(0.9))
 //            ActivityView(activityName: context.state.name)
                 .background(Color.blue.opacity(0.7))
@@ -202,7 +204,7 @@ struct LiveActivitiesWidgetLiveActivity_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             
-            LiveActivitiesData(numberOfPizzas: 0, totalAmount: "", orderNumber: "")
+            LiveActivitiesData(numberOfPizzas: 0, statusString: "", orderNumber: "", bundle: "en")
 //                .previewContext(LiveActivitiesData.ContentState(name: "测试",status: 1), viewKind: .content)
                 .previewContext(LiveActivitiesData.ContentState(name: "测试", price: "RM 8.8", no: "no0", status: 1), viewKind: .content)
                 }

@@ -1,0 +1,21 @@
+/* 
+  InfoPlist.strings
+  ios-eynamics-app
+
+  Created by 彭祖鑫 on 2023/9/20.
+  Copyright © 2023 PC. All rights reserved.
+*/
+//"CFBundleDisplayName" = "PINGALAX";
+
+"NSLocationWhenInUseUsageDescription" = "\"EI Charge\" requires location information to find nearby charging stations.";
+"NSLocationAlwaysUsageDescription" = "\"EI Charge\" requires location information to find nearby charging stations.";
+
+"NSCameraUsageDescription" = "The QR code scanning function requires camera permission to work. Please allow the app to use the camera in settings.";
+
+"NSPhotoLibraryUsageDescription" = "Access to the photo album is required to use this feature. Please enable access in settings.";
+
+"NSPhotoLibraryAddUsageDescription" = "Access to add photos to the photo album is required to use this feature. Please enable access in settings.";
+
+"NSBluetoothAlwaysUsageDescription" = "Allow \"EI Charge\" to find and connect to nearby devices?";
+
+

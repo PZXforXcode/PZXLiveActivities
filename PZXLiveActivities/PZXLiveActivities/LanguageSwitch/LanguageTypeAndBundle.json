@@ -1,0 +1,20 @@
+[
+    
+    {
+        "type": "zh_CN",
+        "bundle": "zh-Hans",
+        "name": "中文",
+        "englishAnno": "Chinese_Simplified",
+        "countryImage": "usercenter_language_CN",
+        "chineseAnno": "中文简体"
+    },
+    {
+        "type": "en_US",
+        "bundle": "en",
+        "name": "English",
+        "englishAnno": "English",
+        "countryImage": "usercenter_language_US",
+        "chineseAnno": "英语"
+    }
+    
+]

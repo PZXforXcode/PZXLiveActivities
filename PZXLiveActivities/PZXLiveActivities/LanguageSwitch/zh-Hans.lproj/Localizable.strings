@@ -1,0 +1,408 @@
+/*
+  Localizable.strings
+  localizationTest
+
+  Created by 彭祖鑫 on 2023/7/3.
+  
+*/
+///本次实际用的
+
+"Login.GoAndLogIn" = "去登录";
+
+"Login.EnterPhoneNumber" = "请输入手机号";
+"Login.EnterVerificationCode" = "请输入验证码";
+"Login.GetVerificationCode" = "获取验证码";
+"Login.LogIn" = "登录";
+
+"Login.RegisterTips" = "未注册的手机号将会自动注册";
+"Login.PhoneNumberErrorTips" = "请输入正确的手机号";
+"Login.AgreementTips" = "我已阅读并同意《用户协议》《隐私政策》";
+"Login.VerificationCodeError" = "验证码错误";
+
+"Login.AgreementTitle" = "服务协议及隐私保护";
+"Login.AgreementContent" = "为了更好地保障您的合法权益，请您阅读并同意以下协议《用户协议》《隐私政策》";
+"Login.Disagree" = "不同意";
+"Login.Agree" = "同意";
+"Login.Reacquire" = "重新获取";
+"Login.NetworkUnavailable" = "网络不可用";
+"Login.serverError" = "服务器错误";
+
+"Login.RequestTimeout" = "请求超时";
+
+
+
+"tabbar.device" = "设备";
+"tabbar.profile" = "我的";
+
+
+
+"main.NoDeviceAdded" = "未添加设备";
+
+"Setting.Setting" = "设置";
+"Setting.BasicInfo" = "基础信息";
+"Setting.ChargerName" = "设备名称";
+"Setting.deviceName" = "设备名称";
+"Setting.FunctionSetting" = "功能设置";
+"Setting.MaxCurrent" = "最大充电电流";
+"Setting.MaxCurrentTips" = "可根据需要设置充电电流的最大值";
+
+"Setting.Other" = "其他";
+"Setting.Specifications" = "规格参数";
+"Setting.Unlink" = "解除绑定";
+"Setting.UnlinkTips" = "是否确认解除与设备的绑定";
+"Setting.Cancel" = "取消";
+
+"Setting.ChangeName" = "修改设备名称";
+"Setting.ChangeErrorTips" = "仅支持汉字、英文字母、数字";
+"Setting.ChargingUpperLimit" = "充电上限";
+"Setting.DischargingLowerLimit" = "放电下限";
+"Setting.ACChargingPower" = "AC充电功率";
+
+"Setting.ButtonSound" = "按键声音";
+"Setting.StandbyScreenTimeout" = "待机和息屏";
+"Setting.DeviceTimeout" = "设备待机时间";
+"Setting.ScreenTimeout" = "息屏时间";
+"Setting.ACTimeout" = "交流电待机时间";
+
+"Setting.OTA" = "固件升级";
+
+"Setting.Upgradeable" = "可升级";
+
+
+"Setting.ChargingUpperLimitTips" = "达到充电上限后，设备将停止充电。为延长电池寿命，建议设为90%";
+
+"Setting.DischargingLowerLimitTips" = "达到放电下限后，设备将停止放电。为延长电池寿命，建议设为20%";
+"Setting.ACChargingPowerTips" = "可设置交流充电时的功率（200W-1200W）";
+"Setting.DeviceTimeoutTips" = "设备持续未使用的时间超过此设置，将自动关机";
+"Setting.ScreenTimeoutTips" = "设备屏幕常亮持续时间超过此设置，将自动息屏";
+"Setting.ACTimeoutTips" = "未使用交流输出的持续时间超过此设置，将关闭交流输出开关";
+
+
+"Add.AddingDevices" = "添加设备";
+"Add.Searching" = "正在搜寻附近设备...";
+"Add.deviceFound" = "找到[]台设备";
+"Add.Research" = "重新搜索";
+"Add.NotSearched" = "未搜索到设备";
+
+"Add.tips1" = "1.请检查设备是否有剩余电量";
+"Add.tips2" = "2.请检查设备是否开机";
+"Add.tips3" = "如果上述条件均满足，请尝试重启设备后再连接。";
+
+
+"Add.tips4" = "1. 请将手机尽量靠近充电桩";
+"Add.tips5" = "2. 请检查设备是否上电";
+"Add.tips6" = "如果上述条件均满足，请尝试重新为设备上电后再连接。";
+
+"alert.DeviceOffline" = "设备离线";
+"alert.Offline" = "离线";
+
+"alert.Connecting" = "连接中";
+"alert.AddFailed" = "添加失败";
+
+"alert.Try" = "可尝试以下方法连接：";
+
+"alert.OpenBlueTooth" = "1.打开手机蓝牙";
+"alert.CloseDevice" = "2.将手机靠近设备，再点击搜索到的设备进行连接";
+"alert.RestartDevice" = "3.将设备重启，再尝试重新连接";
+
+"alert.AddFailed" = "添加失败";
+
+"alert.UnauthorizedPermission" = "未授权权限";
+"alert.ToScan" = "为了扫描、添加和使用蓝牙设备，请打开手机系统设置中的“隐私与安全性-蓝牙”，允许平创数能使用蓝牙权限。";
+"alert.Set" = "去设置";
+
+"alert.UpdateContent" = "更新内容:";
+
+"alert.Later" = "稍后再说";
+"alert.UpdateNow" = "立即更新";
+"alert.IgnoreVersion" = "忽略此版本";
+
+"alert.SetTimeout" = "设置超时";
+
+
+"app.Name" = "平创数能";
+
+
+
+"alert.OK" = "好的";
+
+"alert.Cancel" = "取消";
+"alert.Save" = "保存";
+
+"alert.Close" = "关闭";
+
+"OTA.LatestVersion" = "最新版本：";
+"OTA.CurrentVersion" = "当前版本：";
+"OTA.Downloading" = "正在下载...";
+"OTA.ErrorTips" = "同步到设备出问题了";
+"OTA.DownLoadErrorTips" = "下载失败";
+"OTA.UpgradeNow" = "立即升级";
+"OTA.Syncing" = "正在同步到设备...";
+"OTA.UpgradeFailed" = "升级失败";
+"OTA.UpgradeAgain" = "可重新尝试升级";
+"OTA.UpgradeSuccessful" = "升级成功";
+"OTA.UpToDate" = "当前已是最新版本";
+"OTA.Unknown" = "未知";
+"OTA.Installing" = "正在安装...";
+"OTA.UpdatePackError" = "升级包出问题了";
+"OTA.UpgradeTips" = "升级过程中将无法使用设备，请确认是否升级？";
+"OTA.ExitingTips" = "退出页面将会导致固件升级失败";
+
+"OTA.NotNow" = "暂不升级";
+"OTA.ConfirmUpgrade" = "确认升级";
+"OTA.ConfirmDisconnection" = "确认断开";
+
+"OTA.ContinueToQuit" = "继续退出";
+"OTA.DontQuit" = "暂不退出";
+
+"OTA.UpgradeContent" = "升级内容";
+
+
+"OTA.NotSupportedTips" = "暂不支持当前固件，请更新App到最新版本";
+
+"OTA.Cancel" = "返回";
+"OTA.Update" = "去更新";
+
+
+
+
+
+
+
+"charge.Idle" = "空闲";
+"charge.PluggedIn" = "已插枪";
+"charge.Charging" = "充电中";
+"charge.Timing" = "定时中";
+"charge.ChargingEnd" = "充电结束";
+"charge.ChargingComplete" = "充电结束";
+
+"charge.Faults" = "故障";
+
+"charge.ScheduleCharging" = "定时充电";
+"charge.PlugAndChargeTitle" = "即插即充";
+"charge.PlugAndChargeSubtitle" = "插枪即充，无需手动开启";
+
+"charge.StartCharging" = "开启充电";
+"charge.StopCharging" = "结束充电";
+"charge.PluggedCharging" = "插枪后再开启充电";
+"charge.DuringTiming" = "定时中，暂不支持手动开启充电";
+
+"charge.StartAt" = "开启时间";
+"charge.StopAt" = "停止时间";
+"charge.Remove" = "移除";
+
+"charge.StartChargingTime" = "开始时间";
+"charge.EndChargingTime" = "结束时间";
+
+
+"charge.Repeat" = "重复";
+"charge.Once" = "执行一次";
+"charge.Daily" = "每天";
+"charge.NotSet" = "未设置";
+
+"charge.Start" = "开启";
+"charge.Stop" = "停止";
+
+"charge.ACCharger" = "交流充电桩";
+"charge.BasicParameters" = "基本参数";
+"charge.Netweight" = "产品重量";
+"charge.Dimensions" = "产品尺寸";
+"charge.ElectricalParameters" = "电气参数";
+"charge.RatedVoltage" = "额定电压";
+"charge.RatedFrequency" = "额定频率";
+"charge.RatedPower" = "额定功率";
+"charge.MaxOutputCurrent" = "最大输出电流";
+"charge.SafeDesign" = "安全设计";
+"charge.SafetyFeatures" = "安全防护";
+"charge.DesignStandards" = "设计标准";
+"charge.ProtectionDegrees" = "防护等级";
+"charge.overTips" = "过/欠压、短路、过载、过温、接地、漏电、防雷等保护和急停功能";
+
+
+"charge.Record" = "历史充电记录";
+"charge.AccumulatedData" = "累计数据";
+"charge.ChargedkWh" = "电量 (度)";
+"charge.ChargingTimes" = "充电次数";
+"charge.ChargingDetails" = "充电明细";
+"charge.Last20" = "（最近20次）";
+"charge.Charged" = "电量";
+"charge.kWh" = "度";
+"charge.ChargingDuring" = "充电时长";
+"charge.NoChargingDetails" = "暂无充电明细";
+
+"charge.UnknownTime" = "未知时间";
+
+"Outdoor.RemainingBattery" = "剩余电量";
+
+"Outdoor.RemainingUsingTime" = "剩余可用时间";
+"Outdoor.RemainingChargingTime" = "充电剩余时间";
+"Outdoor.Output" = "输出";
+"Outdoor.Input" = "输入";
+
+"Outdoor.PortablePowerStation" = "便携式储能电源";
+"Outdoor.BasicParameters" = "基本参数";
+
+"Outdoor.ProductWeight" = "产品重量";
+"Outdoor.Size" = "主机尺寸";
+"Outdoor.BatteryCapacity" = "电池容量";
+
+"Outdoor.DischargeParameters" = "放电参数";
+"Outdoor.AC" = "交流";
+"Outdoor.DC" = "直流";
+
+"Outdoor.noUpgradeAvailable" = "暂无更新";
+
+"Outdoor.ACTips" = "230V纯正弦波\n 额定功率1650W, 峰值功率2700W\n AC输出: 3个, 共1650W";
+"Outdoor.DCTips" = "快充USB: 18W×3, 共54W\n Type-C: 100W快充×2,共200W\n 车充输出: 96W×1";
+
+"Outdoor.ChargeParameters" = "充电参数";
+"Outdoor.MainsCharging" = "市电充电";
+"Outdoor.DCCharging" = "直流充电";
+
+"Outdoor.UseEnviroment" = "使用环境";
+"Outdoor.OptimalTemperature" = "最佳使用温度";
+"Outdoor.DischargeTemperature" = "放电温度";
+"Outdoor.ChargeTemperature" = "充电温度";
+"Outdoor.StorageTemperature" = "存储温度";
+
+"Outdoor.NoLimit" = "不限";
+
+"controlOutdoorPower.HyperPowerTips" = "在设置中打开HyperPower功能，可支持使用超出户外电源额定输出功率的交流用电器。";
+
+"configureOutdoorPower.HyperPowerFunction" = "HyperPower功能";
+
+"configureOutdoorPower.Cancel" = "取消";
+"configureOutdoorPower.Open" = "继续打开";
+
+"configureOutdoorPower.HyperPowerTips1" = "HyperPower功能通过调整户外电源的输出电流和电压，在保持系统输出恒定功率的同时，允许您安全地使用部分超出户外电源额定输出功率的用电器。";
+"configureOutdoorPower.HyperPowerTips2" = "此功能适用于带有加热功能，且超额定功率的用电器。";
+"configureOutdoorPower.HyperPowerTips3" = "对于输入电压有严格要求的用电器，请谨慎使用此功能。";
+
+
+
+
+"mine.Update" = "检查更新";
+"mine.Language" = "语言";
+"mine.about" = "关于";
+"mine.ServiceAgreement" = "《服务协议》";
+"mine.PrivicyPolicy" = "《隐私政策》";
+
+"mine.Copied" = "已复制到剪贴板";
+"mine.WeChatAccount" = "平创数能官方微信公众号";
+"mine.SearchWeChat" = "微信搜索公众号“平创PINGALAX”，关注实时讯息";
+
+"mine.UpdateContent" = "更新内容:";
+
+"mine.LatestVersion" = "当前已是最新版本";
+"mine.CurrentVersion" = "当前版本";
+"mine.UpdateNow" = "立即更新";
+"mine.VersionFound" = "发现新版本";
+
+"mine.LogOut" = "退出登录";
+"mine.Avatar" = "头像";
+"mine.Nickname" = "昵称";
+"mine.PhoneNumber" = "手机号";
+"mine.SignOut" = "注销账号";
+"mine.CancellationInstructions" = "注销须知";
+
+"mine.ReadAgree" = "我已阅读并同意";
+"mine.SignOutAgreement" = "您正在进行账号注销的操作，如果您确认注销，我们会在收到您的注销申请且验证您的用户身份后的15个工作日内尽快向您回复。在您主动注销账号之后我们将停止为您提供产品或服务，并删除或匿名化处理您的个人信息。\n但在以下情形中，按照法律法规要求，我们将无法响应您的注销申请：\n(1)与国家安全、国防安全直接相关的； \n(2)与公共安全、公共卫生、重大公共利益直接相关的；\n(3)与犯罪侦查、起诉、审判和判决执行等直接相关的； \n(4)有充分证据表明您存在主观恶意或滥用权利的；\n(5)与我们履行法律法规规定的义务相关的； \n(6)响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的；\n(7)涉及商业秘密的。";
+
+"mine.SignOutSubmitted" = "注销申请已提交";
+
+"mine.ChangeNickname" = "修改昵称";
+"mine.Save" = "保存";
+"mine.LogOutTips" = "您确认要退出登录吗？";
+"mine.Quit" = "退出";
+"mine.AccountManagement" = "账号管理";
+
+
+
+
+
+
+"error.GroundFault" = "接地故障";
+"error.ReversedLine" = "火零线接反";
+"error.EmergencyStop" = "急停故障";
+"error.Leakage" = "漏电故障";
+"error.Overcurrent" = "过流故障";
+"error.Overvoltage" = "过压故障";
+"error.Undervoltage" = "欠压故障";
+"error.Overtemp" = "过温故障";
+"error.Metering" = "计量故障";
+"error.Relay" = "继电器故障";
+"error.CP" = "CP故障";
+
+
+
+
+
+
+
+"error.GroundFaultContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查电源线和插座：检查充电桩的电源线和插座，确保没有损坏、松动或短路的问题。
+3.检查接地线连接：检查充电桩的接地线是否正确连接。确保接地线与设备的接地点牢固连接。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.ReversedLineContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.标记线路：标记充电桩的火线和零线，以便在修复时正确连接线路。
+3.检查电源输入：检查充电桩的电源输入端，确保火线和零线与输入电源正确相连。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.EmergencyStopContent" = "1.断开电源：立即断开充电桩的电源，以避免进一步的电击风险。
+2.检查急停按钮：检查充电桩上的急停按钮是否被卡住或损坏。
+3.检查电路：检查充电桩的急停电路，包括继电器和控制电路，确保它们正常工作。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.LeakageContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查设备周围环境：检查充电桩周围的环境，确保没有潮湿、漏水或其他可能导致漏电的因素存在。
+3.检查充电桩本身：仔细检查充电桩的外观和设备内部，寻找可能导致漏电的损坏、裂缝或松动的部分。特别关注充电插口和导线的连接。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.OvercurrentContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查充电桩配置：检查充电桩的额定电流和安装配置，确保电流是否小于35A。
+3.检查充电桩本身：仔细检查充电桩的电气部件和连接线路，特别关注电气元件、保险丝和断路器等。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.OvervoltageContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查电源供应：检查充电桩的电源供应，确保电压是否小于253V。
+3.检查充电桩本身：仔细检查充电桩内部的电气元件和控制器，特别关注充电桩的电压保护装置和继电器。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.UndervoltageContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查电源供应：检查充电桩的电源供应，确保电压是否大于187V。
+3.检查充电桩本身：仔细检查充电桩内部的电气元件和控制器，特别关注充电桩的电压保护装置和继电器。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.OvertempContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查环境温度：检查充电桩周围的环境温度，确保没有过高的温度或其他可能导致充电桩过热的因素。如果环境温度过高，可增加通风或降低充电功率。
+3.检查电气部件：仔细检查充电桩内部的电气元件（如继电器），确保它没有过热或损坏的迹象。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.MeteringContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查电表和计量设备：检查充电桩内部的电表和计量设备，查看有没有损坏或错误连接的情况。
+3.校准计量设备：如果可能，尝试对计量设备进行校准，以确保其准确测量充电功率和能量。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.RelayContent" = "1.断开电源：立即断开充电桩的电源，以避免电击和火灾风险。
+2.检查继电器连接：检查充电桩内部的继电器连接，确保继电器与电路板或连接器之间的连接是否良好。
+3.检查继电器电源：检查继电器的电源线路，并检查保险丝或断路器是否正常工作。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+"error.CPContent" = "1.重新启动充电桩：尝试断开充电桩的电源，等待片刻后再重新启动充电桩。请确认插枪良好。
+2.检查通信连接：检查充电桩与通信网络的连接是否正常。
+3.检查充电桩软件：确保充电桩的软件版本是最新的，并且没有已知的软件问题。如果可能，尝试进行软件更新。
+4.寻求专业维修员帮助：如果以上步骤无法解决问题，请寻求专业的电气工程师或维修人员的帮助。";
+
+
+"alert.ChargeTips1" = "请在设置的开启充电时间之前，插好充电枪";
+"alert.ChargeTips2" = "充电桩断电后，定时充电的设置会清空";
+"alert.ChargeTips3" = "若设置为每天重复，为确保充电桩能计时准确，请定期让充电桩与App进行蓝牙连接";
+
+
+
+///本次实际用的
+"Switch.Button" = "切换语言";
+"Scan.scan" = "扫一扫";
+"EICharge.Charge" = "个人桩";
+"EICharge.status" = "状态:";
