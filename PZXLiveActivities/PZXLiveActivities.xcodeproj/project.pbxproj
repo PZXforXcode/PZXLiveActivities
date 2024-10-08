@@ -68,6 +68,8 @@
 		8907BBC92CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB8C2CA7B22A00963C73 /* UIImageView+Localizable.swift */; };
 		8907BBCA2CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB922CA7B22A00963C73 /* UITextView+Localizable.swift */; };
 		8907BBCB2CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB862CA7B22A00963C73 /* NSObject+Localizable.swift */; };
+		8938BAF52CA94B1400CCD7AE /* WidgetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938BAF42CA94B1400CCD7AE /* WidgetButton.swift */; };
+		8938BAF62CA94B1400CCD7AE /* WidgetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938BAF42CA94B1400CCD7AE /* WidgetButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,7 @@
 		8907BB9B2CA7B22A00963C73 /* Localizable.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = Localizable.py; sourceTree = "<group>"; };
 		8907BB9C2CA7B22A00963C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8907BB9D2CA7B22A00963C73 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8938BAF42CA94B1400CCD7AE /* WidgetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,7 @@
 				707A562B29EFCCD6001EEDF6 /* LiveActivitiesWidgetBundle.swift */,
 				707A562D29EFCCD6001EEDF6 /* LiveActivitiesWidgetLiveActivity.swift */,
 				707A562F29EFCCD6001EEDF6 /* LiveActivitiesWidget.swift */,
+				8938BAF42CA94B1400CCD7AE /* WidgetButton.swift */,
 				707A563129EFCCD7001EEDF6 /* Assets.xcassets */,
 				707A563329EFCCD7001EEDF6 /* Info.plist */,
 			);
@@ -393,6 +397,7 @@
 				8907BBB02CA7B22A00963C73 /* HCLanguageModel.swift in Sources */,
 				8907BBB12CA7B22A00963C73 /* UIViewController+Localizable.swift in Sources */,
 				8907BBB22CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift in Sources */,
+				8938BAF62CA94B1400CCD7AE /* WidgetButton.swift in Sources */,
 				8907BBB32CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */,
 				8907BBB42CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */,
 				8907BBB52CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */,
@@ -423,6 +428,7 @@
 				8907BBC62CA7B22A00963C73 /* HCLanguageModel.swift in Sources */,
 				8907BBC72CA7B22A00963C73 /* UIViewController+Localizable.swift in Sources */,
 				8907BBC82CA7B22A00963C73 /* HCLocalizableResourcesFilter.swift in Sources */,
+				8938BAF52CA94B1400CCD7AE /* WidgetButton.swift in Sources */,
 				8907BBC92CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */,
 				8907BBCA2CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */,
 				8907BBCB2CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */,
@@ -615,7 +621,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,7 +657,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,6 +688,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = LiveActivitiesWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,6 +718,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = LiveActivitiesWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

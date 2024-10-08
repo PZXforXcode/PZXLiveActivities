@@ -13,5 +13,8 @@ struct LiveActivitiesWidgetBundle: WidgetBundle {
     var body: some Widget {
         LiveActivitiesWidget()
         LiveActivitiesWidgetLiveActivity()
+//        if #available(iOSApplicationExtension 18.0, *) {
+            WidgetButton()
+//        }
     }
 }
