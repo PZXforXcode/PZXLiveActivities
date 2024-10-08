@@ -70,6 +70,8 @@
 		8907BBCB2CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BB862CA7B22A00963C73 /* NSObject+Localizable.swift */; };
 		8938BAF52CA94B1400CCD7AE /* WidgetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938BAF42CA94B1400CCD7AE /* WidgetButton.swift */; };
 		8938BAF62CA94B1400CCD7AE /* WidgetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938BAF42CA94B1400CCD7AE /* WidgetButton.swift */; };
+		8977661F2CB51C4A00C30E88 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977661E2CB51C4A00C30E88 /* SecondViewController.swift */; };
+		897766212CB51EDC00C30E88 /* DefineFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897766202CB51EDC00C30E88 /* DefineFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		8907BB9C2CA7B22A00963C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8907BB9D2CA7B22A00963C73 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8938BAF42CA94B1400CCD7AE /* WidgetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetButton.swift; sourceTree = "<group>"; };
+		8977661E2CB51C4A00C30E88 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		897766202CB51EDC00C30E88 /* DefineFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +196,9 @@
 				70AC216529FB6DBC00FCA5C7 /* PZXLiveActivities.entitlements */,
 				707A560C29EFCCAB001EEDF6 /* AppDelegate.swift */,
 				707A560E29EFCCAB001EEDF6 /* SceneDelegate.swift */,
+				897766202CB51EDC00C30E88 /* DefineFile.swift */,
 				707A561029EFCCAB001EEDF6 /* ViewController.swift */,
+				8977661E2CB51C4A00C30E88 /* SecondViewController.swift */,
 				707A561229EFCCAB001EEDF6 /* Main.storyboard */,
 				707A561529EFCCAD001EEDF6 /* Assets.xcassets */,
 				707A561729EFCCAD001EEDF6 /* LaunchScreen.storyboard */,
@@ -385,6 +391,7 @@
 				8907BBA42CA7B22A00963C73 /* HCLocalizableManager-OC.m in Sources */,
 				8907BBA52CA7B22A00963C73 /* UITabBarItem+Localizable.swift in Sources */,
 				8907BBA62CA7B22A00963C73 /* UISearchBar+Localizable.swift in Sources */,
+				8977661F2CB51C4A00C30E88 /* SecondViewController.swift in Sources */,
 				8907BBA72CA7B22A00963C73 /* HCLocalizableDeinitBlockExecutor.swift in Sources */,
 				8907BBA82CA7B22A00963C73 /* UILabel+Localizable.swift in Sources */,
 				8907BBA92CA7B22A00963C73 /* NSObject+LocalizableDeinit.swift in Sources */,
@@ -401,6 +408,7 @@
 				8907BBB32CA7B22A00963C73 /* UIImageView+Localizable.swift in Sources */,
 				8907BBB42CA7B22A00963C73 /* UITextView+Localizable.swift in Sources */,
 				8907BBB52CA7B22A00963C73 /* NSObject+Localizable.swift in Sources */,
+				897766212CB51EDC00C30E88 /* DefineFile.swift in Sources */,
 				707A561129EFCCAB001EEDF6 /* ViewController.swift in Sources */,
 				707A560D29EFCCAB001EEDF6 /* AppDelegate.swift in Sources */,
 				707A563F29EFEFB0001EEDF6 /* LiveActivitiesData.swift in Sources */,

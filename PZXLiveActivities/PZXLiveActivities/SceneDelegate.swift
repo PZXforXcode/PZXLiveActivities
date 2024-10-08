@@ -54,6 +54,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("OpenAppNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleOpenAppNotification(_:)), name: Notification.Name("OpenAppNotification"), object: nil)
+
+    }
+    
+    @objc private func handleOpenAppNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo, let specialParameter = userInfo["parameter"] as? String {
+            // 根据 specialParameter 处理页面跳转逻辑
+            print("specialParameter = \(specialParameter)")
+            
+            DispatchQueue.main.async {
+                
+                let currentVC = PZXKeyController()
+                let newVC = SecondViewController() // 创建要推送的视图控制器
+                if let navController = currentVC.navigationController {
+                    navController.pushViewController(newVC, animated: true)
+                }
+                
+            }
+            
+            
+        }
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

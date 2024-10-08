@@ -37,6 +37,7 @@ struct OpenAppIntent: AppIntent {
     static var title: LocalizedStringResource { "Open App" }
     static var openAppWhenRun:Bool = true
     func perform() async throws -> some IntentResult {
+        NotificationCenter.default.post(name: Notification.Name("OpenAppNotification"), object: nil, userInfo: ["parameter": "specialParameter"])
         return .result()
     }
 }
