@@ -11,10 +11,12 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     
+    //首次显示小组件，没有数据时使用占位
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), sharedData: "无数据", startDate: Date()) // PZX修改: 增加 startDate 属性
     }
     
+    //组件库
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), sharedData: "暂无数据", startDate: Date()) // PZX修改: 增加 startDate 属性
         completion(entry)
