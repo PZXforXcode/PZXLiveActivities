@@ -22,30 +22,47 @@ struct Provider: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
-        let startDate = Date()
+//        let startDate = Date()
         
         ///传值数据
         ///这两个2选一 生效
         if let sharedDefaults = UserDefaults(suiteName: appGroupKey) {
             let sharedData = sharedDefaults.string(forKey: dataKey)
-            let entry = SimpleEntry(date: Date(), sharedData: sharedData ?? "", startDate: startDate) // PZX修改: 增加 startDate 属性
+            //获取开始时间，
+            let startDate : Date = sharedDefaults.object(forKey: timeDataKey) as! Date
+
+//            let entry = SimpleEntry(date: Date(), sharedData: sharedData ?? "", startDate: startDate) // PZX修改: 增加 startDate 属性
+            let entry = SimpleEntry(date: Date(), sharedData: "计时器01", startDate: startDate) // PZX修改: 增加 startDate 属性
+
             entries.append(entry)
         }
         
 
         // 小组件 一天有 40 ～ 70 次刷新机会
         ///这两个2选一 生效
-         var time = ((24 * 60 * 60)/40)
-         if #available(iOS 16, *) {
-             time = ((24 * 60 * 60)/70)
-         }
-        for second in 0 ..< time {
-             let entryDate = Calendar.current.date(byAdding: .second, value: second, to: startDate)!
-             let entry = SimpleEntry(date: entryDate, sharedData: "计时器", startDate: startDate)
-             entries.append(entry)
-         }
+//        if let sharedDefaults = UserDefaults(suiteName: appGroupKey) {
+//            let sharedData = sharedDefaults.string(forKey: dataKey)
+//            //获取开始时间，
+//            let startDate : Date = sharedDefaults.object(forKey: timeDataKey) as! Date
+//
+//            var time = ((24 * 60 * 60)/40)
+//            if #available(iOS 16, *) {
+//                time = ((24 * 60 * 60)/70)
+//            }
+//            
+//           for second in 0 ..< time {
+//               let entryDate = Calendar.current.date(byAdding: .second, value: second, to: startDate)!
+//                let entry = SimpleEntry(date: entryDate, sharedData: "计时器", startDate: startDate)
+//                entries.append(entry)
+//            }
+//        }
+//   
         
+//        每分钟刷新一次
+//        let refreshDate = Calendar.current.date(byAdding: .minute, value:1, to: Date())!
+//        let timeline = Timeline(entries: entries, policy: .after(refreshDate))
         let timeline = Timeline(entries: entries, policy: .atEnd)
+
         completion(timeline)
     }
 }
@@ -87,11 +104,15 @@ struct LiveActivitiesWidgetEntryView : View {
     var body: some View {
         if #available(iOSApplicationExtension 17.0, *) {
             VStack { // 用 VStack 包裹视图
-                //                Text(entry.date, style: .timer)
-                
+    
                 // PZX修改: 将计时器显示为 "X分X秒" 格式
                 Group{
-                    Text(formattedElapsedTime(from: entry.startDate, to: entry.date))
+                    
+                    Text("\(entry.startDate, style: .relative)前")
+                        .multilineTextAlignment(.center) // 设置文本居中对齐
+                        .contentTransition(.identity)
+
+//                    Text(formattedElapsedTime(from: entry.startDate, to: entry.date))
                     //关闭动画
                         .contentTransition(.identity)
                     Text(entry.sharedData)

@@ -65,6 +65,8 @@ class ViewController: UIViewController {
         ///存储数据 传给 Widget
         let sharedDefaults = UserDefaults(suiteName: appGroupKey)
         sharedDefaults?.set("存储文字0", forKey: dataKey)
+        sharedDefaults?.set(Date(), forKey: timeDataKey)
+
         sharedDefaults?.synchronize()
         
         localizableLabel.hc_Text = "Scan.scan"
