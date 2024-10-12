@@ -8,6 +8,11 @@
 import WidgetKit
 import SwiftUI
 
+// 数据模型，表示从网络获取的数据
+struct NetworkData: Decodable {
+    let title: String
+    let description: String
+}
 
 struct Provider: TimelineProvider {
     
@@ -27,21 +32,21 @@ struct Provider: TimelineProvider {
 //        let startDate = Date()
         
         ///传值数据
-        ///这两个2选一 生效
-        if let sharedDefaults = UserDefaults(suiteName: appGroupKey) {
-            let sharedData = sharedDefaults.string(forKey: dataKey)
-            //获取开始时间，
-            let startDate : Date = sharedDefaults.object(forKey: timeDataKey) as! Date
-
-//            let entry = SimpleEntry(date: Date(), sharedData: sharedData ?? "", startDate: startDate) // PZX修改: 增加 startDate 属性
-            let entry = SimpleEntry(date: Date(), sharedData: "计时器01", startDate: startDate) // PZX修改: 增加 startDate 属性
-
-            entries.append(entry)
-        }
+        ///这3个3选一 生效
+//        if let sharedDefaults = UserDefaults(suiteName: appGroupKey) {
+////            let sharedData = sharedDefaults.string(forKey: dataKey)
+//            //获取开始时间，
+//            let startDate : Date = sharedDefaults.object(forKey: timeDataKey) as! Date
+//
+////            let entry = SimpleEntry(date: Date(), sharedData: sharedData ?? "", startDate: startDate) // PZX修改: 增加 startDate 属性
+//            let entry = SimpleEntry(date: Date(), sharedData: "计时器01", startDate: startDate) // PZX修改: 增加 startDate 属性
+//
+//            entries.append(entry)
+//        }
         
 
         // 小组件 一天有 40 ～ 70 次刷新机会
-        ///这两个2选一 生效
+        ///这3个3选一 生效
 //        if let sharedDefaults = UserDefaults(suiteName: appGroupKey) {
 //            let sharedData = sharedDefaults.string(forKey: dataKey)
 //            //获取开始时间，
@@ -63,10 +68,56 @@ struct Provider: TimelineProvider {
 //        每分钟刷新一次
 //        let refreshDate = Calendar.current.date(byAdding: .minute, value:1, to: Date())!
 //        let timeline = Timeline(entries: entries, policy: .after(refreshDate))
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+//        let timeline = Timeline(entries: entries, policy: .atEnd)
+//        completion(timeline)
+        ///这3个3选一 生效
+        fetchData { networkData in
+            // 定义时间线条目，展示从网络获取的数据
+            if let sharedDefaults = UserDefaults(suiteName: appGroupKey) {
+                
+                let startDate : Date = sharedDefaults.object(forKey: timeDataKey) as! Date
 
-        completion(timeline)
+                let entry = SimpleEntry(date: Date(), sharedData: "\(networkData.title)+\(networkData.description)", startDate: startDate)
+                entries.append(entry)
+                let timeline = Timeline(entries: entries, policy: .atEnd)
+                completion(timeline)
+                
+            }
+            
+        }
+        
+    
     }
+    
+    
+    // 使用 URLSession 进行网络请求
+     func fetchData(completion: @escaping (NetworkData) -> Void) {
+         // 请求 URL
+         let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1")!
+
+         // 创建 URLSession 任务
+         let task = URLSession.shared.dataTask(with: url) { data, response, error in
+             // 处理错误情况
+             guard let data = data, error == nil else {
+                 print("网络请求失败: \(error?.localizedDescription ?? "未知错误")")
+                 completion(NetworkData(title: "加载失败", description: "无法加载数据"))
+                 return
+             }
+
+             // 解析 JSON 数据
+             do {
+                 let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                 let title = json["title"] as? String ?? "无标题"
+                 let body = json["body"] as? String ?? "无内容"
+                 completion(NetworkData(title: title, description: body)) // 将解析后的数据传递给回调
+             } catch {
+                 print("解析失败: \(error.localizedDescription)")
+                 completion(NetworkData(title: "解析失败", description: "无法解析数据"))
+             }
+         }
+         task.resume() // 开始网络请求任务
+     }
+ 
 }
 
 struct SimpleEntry: TimelineEntry {
