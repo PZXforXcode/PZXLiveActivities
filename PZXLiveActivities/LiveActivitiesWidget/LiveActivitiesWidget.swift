@@ -175,8 +175,10 @@ struct LiveActivitiesWidgetEntryView : View {
     
                 
             }
-            .padding() // 添加 padding 增加布局空间
-            .containerBackground(Color.white, for: .widget)
+            .padding() // 添加 padding 增加布局空间（会影响Text和view）
+            .containerBackground(Color.orange, for: .widget)
+            .background(Color.blue) // 设置背景为蓝色
+
         } else {
             // Fallback on earlier versions
             VStack { // 用 VStack 包裹视图
@@ -200,6 +202,8 @@ struct LiveActivitiesWidget: Widget {
         }
         .configurationDisplayName("My Widget PZX")
         .description("This is an example widget. PZX")
+        .contentMarginsDisabled()//禁用默认边距
+
     }
 }
 
