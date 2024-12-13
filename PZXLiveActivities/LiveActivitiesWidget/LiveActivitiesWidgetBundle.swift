@@ -18,6 +18,7 @@ struct LiveActivitiesWidgetBundle: WidgetBundle {
         //widgetControl
 //        if #available(iOSApplicationExtension 18.0, *) {
             WidgetButton()
+//        OpenPhotoCalorieControlWidget()
 //        }
     }
 }

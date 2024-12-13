@@ -31,6 +31,19 @@ struct WidgetButton: ControlWidget {
     }
 }
 
+struct OpenPhotoCalorieControlWidget:ControlWidget {
+    let kind = "OpenPhotoCalorieControlWidget"
+    var body: some ControlWidgetConfiguration {
+        StaticControlConfiguration(kind: kind) {
+            ControlWidgetButton(action: OpenAppIntent()) {
+                Image(systemName: "camera.viewfinder")
+            }
+        }
+        .displayName(LocalizedStringResource("拍照记饮食"))
+        .promptsForUserConfiguration()
+    }
+}
+
 
 struct OpenAppIntent: AppIntent {
     
