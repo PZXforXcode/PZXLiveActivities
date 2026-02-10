@@ -48,6 +48,7 @@ struct OpenPhotoCalorieControlWidget:ControlWidget {
 struct OpenAppIntent: AppIntent {
     
     static var title: LocalizedStringResource { "Open App" }
+    //如果要打开App记得在主工程的Target - Compile Sources  Add 这个文件
     static var openAppWhenRun:Bool = true
     func perform() async throws -> some IntentResult {
         NotificationCenter.default.post(name: Notification.Name("OpenAppNotification"), object: nil, userInfo: ["parameter": "specialParameter"])
