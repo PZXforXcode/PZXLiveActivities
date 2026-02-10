@@ -168,7 +168,7 @@ struct LiveActivitiesWidgetEntryView : View {
 //                    Text(formattedElapsedTime(from: entry.startDate, to: entry.date))
                     //关闭动画
                         .contentTransition(.identity)
-                    Text(entry.sharedData)
+//                    Text(entry.sharedData)
                     Text("我是Widget")
                 }
                 .font(Font.system(size: 12))
